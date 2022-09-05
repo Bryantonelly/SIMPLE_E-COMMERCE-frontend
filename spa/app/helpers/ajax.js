@@ -5,7 +5,6 @@ export default async function ajax ( props ) {
     try{
         let response = await fetch(url, {
             method: method,
-            headers: { "content-type": "application/json" },
         });
         let data = await response.json();
         success( data );

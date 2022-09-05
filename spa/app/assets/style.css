@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Joan&family=Nunito:wght@300;400;500;600;700&family=Roboto:wght@100&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family: 'Joan', serif;
+    font-family: 'Nunito', sans-serif;
+}
+#root{
+    display: flex;
+}
+.sidebar{
+    width: 18rem;
+    height: 100vh;
+    background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    user-select: none;
+    display: fixed;
+}
+.sidebar__header,
+.sidebar__body{
+    display: flex;
+    flex-direction: column;
+}
+.sidebar__header{
+    align-items: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+}
+.sidebar__header img{
+    width: 8rem;
+}
+.sidebar__title{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.sidebar__subtitle{
+    font-weight: 400;
+}
+.sidebar__option{
+    padding: 1rem 0 1rem 3rem;
+}
+.sidebar__option--active{
+    border-right: .4rem solid #7c074c;
+    font-weight: bold;
+}
+
+/* content */
+.content{
+    overflow-y: scroll;
+    width: calc(100vw - 18rem);
+    height: 100vh;
+}
+.content__search{
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 0;
+}
+.content__search p{
+    padding-left: 2rem;
+    padding-right: .7rem;
+}
+.content__input{
+    background-color: #e9e9e9;
+    border: 1px solid #e9e9e9!important;
+    padding-left: 1rem;
+    box-sizing: border-box;
+    height: 2rem;
+    color: #908484;
+}
+.content__body{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+
+@keyframes slidein {
+    from {
+        transform: scale(.7);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+/* card */
+.card{
+    background: #e9e9e9;
+    animation-duration: 1s;
+    animation-name: slidein;
+    width: 12rem;
+    padding: 1rem;
+    box-shadow: .5rem .5rem .5rem #00000032;
+    margin: 1rem;
+}
+.card:hover{
+    transform: scale(1.1);
+}
+.card__header{
+    margin: 1rem 0;
+}
+.card__header p{
+    font-size: 3rem;
+    font-weight: 900;
+}
+.card__name{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.card__price{
+    margin-top: 1rem;
+}
+.card__category{
+    color: #908484;
+}
+.card__img{
+    margin-top: 1rem;
+    width: 12rem;
+}
